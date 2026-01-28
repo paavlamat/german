@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multilingual Pronunciation Trainer</title>
+    <title>German Pronunciation Trainer</title>
     <style>
         * {
             margin: 0;
@@ -117,71 +117,6 @@
         .mode-description {
             color: #7f8c8d;
             margin-bottom: 20px;
-        }
-        
-        /* Language Selection */
-        .language-selection {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            width: 100%;
-            max-width: 800px;
-        }
-        
-        .language-group {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .language-group-title {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1rem;
-            text-align: center;
-        }
-        
-        .language-options {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .language-option {
-            padding: 10px 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 600;
-            min-width: 100px;
-            text-align: center;
-        }
-        
-        .language-option:hover {
-            border-color: #3498db;
-            background-color: #f8f9fa;
-        }
-        
-        .language-option.selected {
-            background-color: #3498db;
-            color: white;
-            border-color: #3498db;
-        }
-        
-        .language-label {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1rem;
         }
         
         /* Word Limit Control */
@@ -405,6 +340,7 @@
         .secondary-word {
             color: #7f8c8d;
             font-style: italic;
+            margin-bottom: 3px;
         }
         
         .third-word {
@@ -823,8 +759,8 @@
 <body>
     <div class="container">
         <header id="main-header">
-            <h1 id="page-title">Multilingual Pronunciation Trainer</h1>
-            <p class="subtitle" id="page-subtitle">Select a learning mode to begin</p>
+            <h1 id="page-title">German Pronunciation Trainer</h1>
+            <p class="subtitle" id="page-subtitle">Learn German words with English and Danish translations</p>
             <button id="back-button" class="back-button" style="display: none;">
                 ← Back to Home
             </button>
@@ -832,24 +768,6 @@
         
         <!-- Home Screen -->
         <div id="home-screen" class="home-screen">
-            <div class="language-selection" id="language-selection">
-                <div class="language-group">
-                    <div class="language-group-title">Select main language to learn:</div>
-                    <div class="language-options" id="main-language-options">
-                        <div class="language-option selected" data-language="german">German 🇩🇪</div>
-                    </div>
-                </div>
-                
-                <div class="language-group">
-                    <div class="language-group-title">Secondary language for translations:</div>
-                    <div class="language-options" id="secondary-language-options">
-                        <div class="language-option selected" data-language="english">English 🇬🇧</div>
-                        <div class="language-option" data-language="danish">Danish 🇩🇰</div>
-                        <div class="language-option" data-language="mixed">Mixed 🌍</div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="word-limit-control" id="word-limit-control">
                 <div class="word-limit-title">Word Limit: <span id="word-limit-display">200</span> words</div>
                 <div class="word-limit-slider-container">
@@ -865,28 +783,28 @@
                 <div class="mode-card" data-mode="list">
                     <div class="mode-icon">📋</div>
                     <div class="mode-title">List Mode</div>
-                    <div class="mode-description">Browse all words with their translations. Click any word to hear pronunciation. Bookmark words for later review.</div>
+                    <div class="mode-description">Browse all German words with English and Danish translations. Click any word to hear pronunciation. Bookmark words for later review.</div>
                     <div class="btn btn-primary">Select Mode</div>
                 </div>
                 
                 <div class="mode-card" data-mode="random">
                     <div class="mode-icon">🎲</div>
                     <div class="mode-title">Random Mode</div>
-                    <div class="mode-description">Get random words to practice. Reveal translations when ready. Great for vocabulary testing.</div>
+                    <div class="mode-description">Get random German words to practice. Reveal English and Danish translations when ready. Great for vocabulary testing.</div>
                     <div class="btn btn-primary">Select Mode</div>
                 </div>
                 
                 <div class="mode-card" data-mode="quiz">
                     <div class="mode-icon">❓</div>
                     <div class="mode-title">Quiz Mode</div>
-                    <div class="mode-description">Test your knowledge with multiple choice questions. Main language to secondary language translations.</div>
+                    <div class="mode-description">Test your knowledge with multiple choice questions. Match German words to their English AND Danish translations.</div>
                     <div class="btn btn-primary">Select Mode</div>
                 </div>
                 
                 <div class="mode-card" data-mode="audio">
                     <div class="mode-icon">🎵</div>
                     <div class="mode-title">Audio Challenge</div>
-                    <div class="mode-description">Listen to words and type what you hear. Perfect for pronunciation and listening practice.</div>
+                    <div class="mode-description">Listen to German words and type what you hear. Perfect for pronunciation and listening practice.</div>
                     <div class="btn btn-primary">Select Mode</div>
                 </div>
             </div>
@@ -928,8 +846,8 @@
             </div>
             
             <div class="instructions">
-                <p><strong>Random Mode:</strong> A random word will appear. Try to recall the meaning before revealing the translation.</p>
-                <p>Use the "Speak Word" button to hear pronunciation, "Next Word" for a new random word, and "Reveal Translation" to see the translations.</p>
+                <p><strong>Random Mode:</strong> A random German word will appear. Try to recall the English and Danish meanings before revealing the translations.</p>
+                <p>Use the "Speak Word" button to hear pronunciation, "Next Word" for a new random word, and "Reveal Translation" to see both English and Danish translations.</p>
                 <p><strong>Word Limit:</strong> Using <span id="random-word-limit-info">200</span> words from the list.</p>
             </div>
             
@@ -945,12 +863,12 @@
                             🔄 Next Word
                         </button>
                         <button class="btn btn-tertiary" id="reveal-translation">
-                            👁️ Reveal Translation
+                            👁️ Reveal Translations
                         </button>
                     </div>
                     
                     <div class="random-translation hidden" id="random-translation">
-                        <div class="translation-text">Translation:</div>
+                        <div class="translation-text">Translations:</div>
                         <!-- Translations will be dynamically inserted here -->
                     </div>
                 </div>
@@ -967,7 +885,7 @@
                     </div>
                     
                     <div class="quiz-instruction" id="quiz-instruction">
-                        What is the correct translation for this word?
+                        What are the correct English AND Danish translations for this German word?
                     </div>
                     
                     <div class="quiz-question" id="quiz-question">
@@ -1010,7 +928,7 @@
                     </div>
                     
                     <div class="audio-question" id="audio-question">
-                        Listen to the word and type what you hear
+                        Listen to the German word and type what you hear
                     </div>
                     
                     <div class="audio-controls">
@@ -1023,14 +941,14 @@
                     </div>
                     
                     <div class="audio-input-container">
-                        <input type="text" class="audio-input" id="audio-input" placeholder="Type the word here...">
+                        <input type="text" class="audio-input" id="audio-input" placeholder="Type the German word here...">
                         <button class="btn btn-primary" id="submit-audio-answer">
                             Submit Answer
                         </button>
                     </div>
                     
                     <div class="audio-translation" id="audio-translation" style="display: none;">
-                        <!-- Translation will be shown here after guess -->
+                        <!-- Translations will be shown here after guess -->
                     </div>
                     
                     <div class="quiz-feedback" id="audio-feedback">
@@ -1047,7 +965,7 @@
         </div>
         
         <footer>
-            <p>Multilingual Pronunciation Trainer</p>
+            <p>German Pronunciation Trainer - English & Danish Translations</p>
         </footer>
     </div>
 
@@ -1267,10 +1185,6 @@
         const pageSubtitle = document.getElementById('page-subtitle');
         const modeCards = document.querySelectorAll('.mode-card');
         
-        // Language selection elements
-        const mainLanguageOptions = document.querySelectorAll('#main-language-options .language-option');
-        const secondaryLanguageOptions = document.querySelectorAll('#secondary-language-options .language-option');
-        
         // Word limit elements
         const wordLimitSlider = document.getElementById('word-limit-slider');
         const wordLimitInput = document.getElementById('word-limit-input');
@@ -1323,8 +1237,7 @@
         let currentRandomWord = null;
         
         // Language selection state
-        let mainLanguage = localStorage.getItem('mainLanguage') || 'german';
-        let secondaryLanguage = localStorage.getItem('secondaryLanguage') || 'english';
+        const mainLanguage = 'german';
         
         // Word limit state
         let wordLimit = localStorage.getItem('wordLimit') || 200;
@@ -1332,15 +1245,15 @@
         // Bookmark state
         let bookmarkedWords = JSON.parse(localStorage.getItem('bookmarkedWords')) || [];
         
-        // Quiz state
+        // Quiz state - SIMPLIFIED
         let quizState = {
             currentQuestionIndex: 0,
             score: 0,
             totalQuestions: 10,
-            questions: [],
+            currentQuestion: null,
             isAnswered: false,
-            selectedOption: null,
-            lastSelectedOptionIndex: null
+            selectedOptionIndex: null,
+            shouldAutoPlay: false
         };
         
         // Audio challenge state
@@ -1350,30 +1263,21 @@
             score: 0,
             totalQuestions: 10,
             words: [],
-            isAnswered: false
+            isAnswered: false,
+            shouldAutoPlay: false
         };
 
-        // Language codes for speech synthesis (only German now)
+        // Language codes for speech synthesis
         const languageCodes = {
             german: 'de-DE'
         };
 
-        // Language names for display
-        const languageNames = {
-            german: 'German',
-            danish: 'Danish',
-            english: 'English'
-        };
-
-        // Audio context for sound effects
-        let audioContext;
+        // Initialize audio context
+        let audioContext = null;
         let isAudioContextInitialized = false;
 
         // Initialize
         function init() {
-            // Set initial language selection
-            updateLanguageSelections();
-            
             // Initialize word limit controls
             updateWordLimitControls();
             
@@ -1386,31 +1290,6 @@
             initializeAudioChallenge();
         }
 
-        // Update language selection UI
-        function updateLanguageSelections() {
-            // Update main language (only German available)
-            mainLanguageOptions.forEach(option => {
-                if (option.dataset.language === mainLanguage) {
-                    option.classList.add('selected');
-                } else {
-                    option.classList.remove('selected');
-                }
-            });
-            
-            // Update secondary language
-            secondaryLanguageOptions.forEach(option => {
-                if (option.dataset.language === secondaryLanguage) {
-                    option.classList.add('selected');
-                } else {
-                    option.classList.remove('selected');
-                }
-            });
-            
-            // Update page title based on main language
-            const languageName = languageNames[mainLanguage] || 'Language';
-            pageTitle.textContent = `${languageName} Pronunciation Trainer`;
-        }
-
         // Update word limit controls
         function updateWordLimitControls() {
             wordLimitSlider.value = wordLimit;
@@ -1418,14 +1297,6 @@
             wordLimitDisplay.textContent = wordLimit;
             listWordLimitInfo.textContent = wordLimit;
             randomWordLimitInfo.textContent = wordLimit;
-            
-            // Update word limit info in other modes when they're active
-            if (listModeTab.classList.contains('active')) {
-                listWordLimitInfo.textContent = wordLimit;
-            }
-            if (randomModeTab.classList.contains('active')) {
-                randomWordLimitInfo.textContent = wordLimit;
-            }
         }
 
         // Get limited word data based on current word limit
@@ -1477,11 +1348,9 @@
 
         // Create a word card element
         function createWordCard(word, isBookmarked, isInBookmarkSection) {
-            // Get the main word and other languages based on selection
-            const mainWord = word[mainLanguage];
-            const otherLanguages = ['german', 'danish', 'english'].filter(lang => lang !== mainLanguage);
-            const secondaryWord = word[otherLanguages[0]];
-            const thirdWord = word[otherLanguages[1]];
+            const mainWord = word.german;
+            const secondaryWord = `English: ${word.english}`;
+            const thirdWord = `Danish: ${word.danish}`;
             
             const wordCard = document.createElement('div');
             wordCard.className = `word-card fade-in ${isBookmarked ? 'bookmarked' : ''}`;
@@ -1503,7 +1372,6 @@
             
             // Add click event for pronunciation
             wordCard.addEventListener('click', (e) => {
-                // Don't trigger if clicking on bookmark icon
                 if (!e.target.classList.contains('bookmark-icon')) {
                     speakWord(mainWord, wordCard, volume);
                 }
@@ -1524,17 +1392,12 @@
             const index = bookmarkedWords.indexOf(wordNumber);
             
             if (index === -1) {
-                // Add to bookmarks
                 bookmarkedWords.push(wordNumber);
             } else {
-                // Remove from bookmarks
                 bookmarkedWords.splice(index, 1);
             }
             
-            // Save to localStorage
             localStorage.setItem('bookmarkedWords', JSON.stringify(bookmarkedWords));
-            
-            // Re-render word cards
             renderWordCards();
         }
 
@@ -1564,9 +1427,9 @@
             oscillator.connect(gainNode);
             gainNode.connect(audioContext.destination);
             
-            oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime); // C5
-            oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1); // E5
-            oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2); // G5
+            oscillator.frequency.setValueAtTime(523.25, audioContext.currentTime);
+            oscillator.frequency.setValueAtTime(659.25, audioContext.currentTime + 0.1);
+            oscillator.frequency.setValueAtTime(783.99, audioContext.currentTime + 0.2);
             
             gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
             gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
@@ -1582,38 +1445,6 @@
                 card.addEventListener('click', () => {
                     const mode = card.dataset.mode;
                     switchToMode(mode);
-                });
-            });
-            
-            // Main language selection (only German available)
-            mainLanguageOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                    mainLanguage = option.dataset.language;
-                    localStorage.setItem('mainLanguage', mainLanguage);
-                    
-                    // If secondary language is the same as main, change it
-                    if (secondaryLanguage === mainLanguage) {
-                        // Find a different language
-                        const availableLanguages = ['danish', 'english'].filter(lang => lang !== mainLanguage);
-                        secondaryLanguage = availableLanguages[0];
-                        localStorage.setItem('secondaryLanguage', secondaryLanguage);
-                    }
-                    
-                    updateLanguageSelections();
-                    renderWordCards();
-                    selectRandomWord();
-                    initializeQuiz();
-                    initializeAudioChallenge();
-                });
-            });
-            
-            // Secondary language selection
-            secondaryLanguageOptions.forEach(option => {
-                option.addEventListener('click', () => {
-                    secondaryLanguage = option.dataset.language;
-                    localStorage.setItem('secondaryLanguage', secondaryLanguage);
-                    updateLanguageSelections();
-                    initializeQuiz();
                 });
             });
             
@@ -1640,7 +1471,6 @@
             wordLimitInput.addEventListener('input', () => {
                 let value = parseInt(wordLimitInput.value);
                 
-                // Validate input
                 if (isNaN(value) || value < 1) value = 1;
                 if (value > 200) value = 200;
                 
@@ -1679,7 +1509,7 @@
             // Random mode buttons
             speakRandomWordBtn.addEventListener('click', () => {
                 if (currentRandomWord) {
-                    speakWord(currentRandomWord[mainLanguage], null, randomVolume);
+                    speakWord(currentRandomWord.german, null, randomVolume);
                 }
             });
             
@@ -1712,43 +1542,58 @@
         function switchToMode(mode) {
             currentMode = mode;
             
-            // Hide home screen and show back button
             homeScreen.style.display = 'none';
             backButton.style.display = 'flex';
             
-            // Hide all tabs
             listModeTab.classList.remove('active');
             randomModeTab.classList.remove('active');
             quizModeTab.classList.remove('active');
             audioModeTab.classList.remove('active');
             
-            // Update title and subtitle based on mode
-            const languageName = languageNames[mainLanguage] || 'Language';
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+            
             switch(mode) {
                 case 'list':
                     pageTitle.textContent = 'List Mode';
-                    pageSubtitle.textContent = `Click any ${languageName.toLowerCase()} word to hear pronunciation`;
+                    pageSubtitle.textContent = 'Click any German word to hear pronunciation';
                     listModeTab.classList.add('active');
-                    // Re-render to update bookmarks and word limit
                     renderWordCards();
                     break;
                 case 'random':
                     pageTitle.textContent = 'Random Mode';
-                    pageSubtitle.textContent = `Test your ${languageName.toLowerCase()} vocabulary with random words`;
+                    pageSubtitle.textContent = 'Test your German vocabulary with random words';
                     randomModeTab.classList.add('active');
                     randomWordLimitInfo.textContent = wordLimit;
                     break;
                 case 'quiz':
                     pageTitle.textContent = 'Quiz Mode';
-                    pageSubtitle.textContent = `Test your knowledge with ${languageName.toLowerCase()} to ${secondaryLanguage === 'mixed' ? 'multiple languages' : languageNames[secondaryLanguage].toLowerCase()} translations`;
+                    pageSubtitle.textContent = 'Test your knowledge with German to English & Danish translations';
                     quizModeTab.classList.add('active');
+                    
+                    quizState.shouldAutoPlay = true;
                     initializeQuiz();
+                    
+                    setTimeout(() => {
+                        if (quizState.shouldAutoPlay && quizState.currentQuestionIndex === 0) {
+                            playQuizWord();
+                        }
+                    }, 800);
                     break;
                 case 'audio':
                     pageTitle.textContent = 'Audio Challenge';
-                    pageSubtitle.textContent = `Listen and type the ${languageName.toLowerCase()} words you hear`;
+                    pageSubtitle.textContent = 'Listen and type the German words you hear';
                     audioModeTab.classList.add('active');
+                    
+                    audioState.shouldAutoPlay = true;
                     initializeAudioChallenge();
+                    
+                    setTimeout(() => {
+                        if (audioState.shouldAutoPlay && audioState.currentQuestionIndex === 0) {
+                            playAudioWord();
+                        }
+                    }, 800);
                     break;
             }
         }
@@ -1757,30 +1602,25 @@
         function goBackToHome() {
             currentMode = 'home';
             
-            // Show home screen and hide back button
             homeScreen.style.display = 'flex';
             backButton.style.display = 'none';
             
-            // Hide all tabs
             listModeTab.classList.remove('active');
             randomModeTab.classList.remove('active');
             quizModeTab.classList.remove('active');
             audioModeTab.classList.remove('active');
             
-            // Reset title and subtitle
-            const languageName = languageNames[mainLanguage] || 'Language';
-            pageTitle.textContent = `${languageName} Pronunciation Trainer`;
-            pageSubtitle.textContent = 'Select a learning mode to begin';
+            pageTitle.textContent = 'German Pronunciation Trainer';
+            pageSubtitle.textContent = 'Learn German words with English and Danish translations';
             
-            // Cancel any ongoing speech
             if (window.speechSynthesis.speaking) {
                 window.speechSynthesis.cancel();
             }
             
-            // Reset quiz when leaving quiz mode
-            initializeQuiz();
+            quizState.shouldAutoPlay = false;
+            audioState.shouldAutoPlay = false;
             
-            // Reset audio challenge when leaving audio mode
+            initializeQuiz();
             initializeAudioChallenge();
         }
 
@@ -1798,21 +1638,16 @@
 
         // Select a random word for random mode
         function selectRandomWord() {
-            // Hide translation
             randomTranslation.classList.add('hidden');
-            randomTranslation.innerHTML = '<div class="translation-text">Translation:</div>';
+            randomTranslation.innerHTML = '<div class="translation-text">Translations:</div>';
             
             const limitedWordData = getLimitedWordData();
-            
-            // Select a random word from limited data
             const randomIndex = Math.floor(Math.random() * limitedWordData.length);
             currentRandomWord = limitedWordData[randomIndex];
             
-            // Update display
-            randomMainWord.textContent = currentRandomWord[mainLanguage];
+            randomMainWord.textContent = currentRandomWord.german;
             randomMainWord.classList.add('fade-in');
             
-            // Remove fade-in class after animation completes
             setTimeout(() => {
                 randomMainWord.classList.remove('fade-in');
             }, 500);
@@ -1821,26 +1656,21 @@
         // Reveal translation in random mode
         function revealTranslation() {
             if (currentRandomWord) {
-                // Clear previous translations
-                randomTranslation.innerHTML = '<div class="translation-text">Translation:</div>';
+                randomTranslation.innerHTML = '<div class="translation-text">Translations:</div>';
                 
-                // Get all languages except the main one
-                const otherLanguages = ['german', 'danish', 'english'].filter(lang => lang !== mainLanguage);
+                const englishItem = document.createElement('div');
+                englishItem.className = 'translation-item';
+                englishItem.textContent = `English: ${currentRandomWord.english}`;
+                randomTranslation.appendChild(englishItem);
                 
-                // Add translations for all other languages
-                otherLanguages.forEach(lang => {
-                    if (currentRandomWord[lang]) {
-                        const translationItem = document.createElement('div');
-                        translationItem.className = 'translation-item';
-                        translationItem.textContent = `${languageNames[lang]}: ${currentRandomWord[lang]}`;
-                        randomTranslation.appendChild(translationItem);
-                    }
-                });
+                const danishItem = document.createElement('div');
+                danishItem.className = 'translation-item';
+                danishItem.textContent = `Danish: ${currentRandomWord.danish}`;
+                randomTranslation.appendChild(danishItem);
                 
                 randomTranslation.classList.remove('hidden');
                 randomTranslation.classList.add('fade-in');
                 
-                // Remove fade-in class after animation completes
                 setTimeout(() => {
                     randomTranslation.classList.remove('fade-in');
                 }, 500);
@@ -1849,37 +1679,25 @@
 
         // Speak a word
         function speakWord(word, wordCard, volumeLevel) {
-            // Cancel any ongoing speech
             if (window.speechSynthesis.speaking) {
                 window.speechSynthesis.cancel();
             }
             
-            // If in list mode, update UI
             if (wordCard) {
-                // Remove playing class from all cards
                 document.querySelectorAll('.word-card').forEach(card => {
                     card.classList.remove('playing');
                 });
                 
-                // Add playing class to clicked card
                 wordCard.classList.add('playing');
                 currentlyPlaying = wordCard;
             }
             
-            // Create speech synthesis utterance
             const utterance = new SpeechSynthesisUtterance(word);
-            
-            // Set language to German only
             utterance.lang = languageCodes.german;
-            
-            // Set volume
             utterance.volume = volumeLevel;
-            
-            // Set rate and pitch
             utterance.rate = 0.8;
             utterance.pitch = 1;
             
-            // When speech ends, update UI
             utterance.onend = () => {
                 if (wordCard) {
                     wordCard.classList.remove('playing');
@@ -1887,7 +1705,6 @@
                 }
             };
             
-            // When speech is cancelled, update UI
             utterance.onerror = () => {
                 if (wordCard) {
                     wordCard.classList.remove('playing');
@@ -1895,83 +1712,27 @@
                 }
             };
             
-            // Speak the word
             window.speechSynthesis.speak(utterance);
         }
 
-        // QUIZ MODE FUNCTIONS
+        // QUIZ MODE FUNCTIONS - COMPLETELY SIMPLIFIED
         function initializeQuiz() {
-            // Reset quiz state
             quizState = {
                 currentQuestionIndex: 0,
                 score: 0,
                 totalQuestions: 10,
-                questions: [],
+                currentQuestion: null,
                 isAnswered: false,
-                selectedOption: null,
-                lastSelectedOptionIndex: null
+                selectedOptionIndex: null,
+                shouldAutoPlay: false
             };
             
-            // Generate quiz questions
-            generateQuizQuestions();
-            
-            // Update display
             updateQuizDisplay();
             nextQuizQuestionBtn.style.display = 'block';
             quizFeedback.style.display = 'none';
             playQuizWordBtn.style.display = 'block';
             playQuizAgainBtn.style.display = 'none';
-            
-            // Reset button text
             nextQuizQuestionBtn.textContent = 'Next Question →';
-        }
-
-        function generateQuizQuestions() {
-            quizState.questions = [];
-            
-            const limitedWordData = getLimitedWordData();
-            
-            // If word limit is less than 10, adjust total questions
-            if (limitedWordData.length < 10) {
-                quizState.totalQuestions = Math.min(limitedWordData.length, 10);
-            }
-            
-            // Select random words for the quiz
-            const shuffledWords = [...limitedWordData].sort(() => Math.random() - 0.5).slice(0, quizState.totalQuestions);
-            
-            shuffledWords.forEach((word, index) => {
-                // Determine which secondary language to ask for
-                let targetLanguage;
-                if (secondaryLanguage === 'mixed') {
-                    // Randomly choose between the two languages that aren't the main one
-                    const availableLanguages = ['danish', 'english'];
-                    targetLanguage = availableLanguages[Math.floor(Math.random() * 2)];
-                } else {
-                    targetLanguage = secondaryLanguage;
-                }
-                
-                // Create 4 options (1 correct, 3 incorrect)
-                const correctAnswer = word[targetLanguage];
-                const incorrectAnswers = [];
-                
-                // Get 3 random incorrect answers from other words
-                const otherWords = limitedWordData.filter(w => w !== word);
-                for (let i = 0; i < 3; i++) {
-                    const randomWord = otherWords[Math.floor(Math.random() * otherWords.length)];
-                    incorrectAnswers.push(randomWord[targetLanguage]);
-                }
-                
-                // Shuffle options
-                const allOptions = [correctAnswer, ...incorrectAnswers].sort(() => Math.random() - 0.5);
-                
-                quizState.questions.push({
-                    word: word[mainLanguage],
-                    correctAnswer: correctAnswer,
-                    options: allOptions,
-                    targetLanguage: targetLanguage,
-                    wordObj: word
-                });
-            });
         }
 
         function updateQuizDisplay() {
@@ -1988,15 +1749,11 @@
                 return;
             }
             
-            const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+            // Generate a new question
+            generateQuizQuestion();
             
-            // Update question
-            quizQuestion.textContent = currentQuestion.word;
-            
-            // Update instruction
-            const instruction = document.getElementById('quiz-instruction');
-            const targetLangName = languageNames[currentQuestion.targetLanguage] || currentQuestion.targetLanguage;
-            instruction.textContent = `What is the ${targetLangName} translation for this ${languageNames[mainLanguage].toLowerCase()} word?`;
+            // Update question display
+            quizQuestion.textContent = quizState.currentQuestion.germanWord;
             
             // Update audio controls
             playQuizWordBtn.style.display = 'block';
@@ -2004,15 +1761,13 @@
             
             // Update options
             quizOptions.innerHTML = '';
-            currentQuestion.options.forEach((option, index) => {
+            quizState.currentQuestion.options.forEach((option, index) => {
                 const optionElement = document.createElement('div');
                 optionElement.className = 'quiz-option';
-                optionElement.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
+                optionElement.innerHTML = `<strong>${String.fromCharCode(65 + index)}.</strong> <span style="color: #7f8c8d">English:</span> ${option.english}, <span style="color: #7f8c8d">Danish:</span> ${option.danish}`;
                 optionElement.dataset.index = index;
                 
-                // Add click event to select option
                 optionElement.addEventListener('click', () => selectQuizOption(index));
-                
                 quizOptions.appendChild(optionElement);
             });
             
@@ -2020,13 +1775,11 @@
             quizScore.textContent = `Score: ${quizState.score}/${quizState.currentQuestionIndex}`;
             quizQuestionCount.textContent = `Question: ${quizState.currentQuestionIndex + 1}/${quizState.totalQuestions}`;
             
-            // Reset feedback
+            // Reset UI state
             quizFeedback.style.display = 'none';
             quizFeedback.className = 'quiz-feedback';
-            
-            // Reset selected option
-            quizState.selectedOption = null;
-            quizState.lastSelectedOptionIndex = null;
+            quizState.isAnswered = false;
+            quizState.selectedOptionIndex = null;
             
             // Enable all options
             document.querySelectorAll('.quiz-option').forEach(option => {
@@ -2034,18 +1787,61 @@
                 option.classList.remove('selected', 'correct', 'incorrect');
             });
             
-            quizState.isAnswered = false;
-            
-            // Reset button text
             nextQuizQuestionBtn.textContent = 'Next Question →';
+        }
+
+        function generateQuizQuestion() {
+            const limitedWordData = getLimitedWordData();
+            
+            // Pick a random German word
+            const germanWordIndex = Math.floor(Math.random() * limitedWordData.length);
+            const germanWord = limitedWordData[germanWordIndex];
+            
+            // Create options - one correct and three incorrect
+            const options = [];
+            
+            // Add correct option
+            options.push({
+                english: germanWord.english,
+                danish: germanWord.danish,
+                isCorrect: true
+            });
+            
+            // Add three incorrect options
+            for (let i = 0; i < 3; i++) {
+                let randomWord;
+                do {
+                    const randomIndex = Math.floor(Math.random() * limitedWordData.length);
+                    randomWord = limitedWordData[randomIndex];
+                } while (randomWord.number === germanWord.number || options.some(opt => opt.english === randomWord.english));
+                
+                options.push({
+                    english: randomWord.english,
+                    danish: randomWord.danish,
+                    isCorrect: false
+                });
+            }
+            
+            // Shuffle options
+            for (let i = options.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [options[i], options[j]] = [options[j], options[i]];
+            }
+            
+            quizState.currentQuestion = {
+                germanWord: germanWord.german,
+                correctEnglish: germanWord.english,
+                correctDanish: germanWord.danish,
+                options: options
+            };
         }
 
         function selectQuizOption(index) {
             if (quizState.isAnswered) return;
             
             // Remove selected class from previous selection
-            if (quizState.lastSelectedOptionIndex !== null) {
-                const prevOption = document.querySelector(`.quiz-option[data-index="${quizState.lastSelectedOptionIndex}"]`);
+            if (quizState.selectedOptionIndex !== null) {
+                const prevOption = document.querySelector(`.quiz-option[data-index="${quizState.selectedOptionIndex}"]`);
                 if (prevOption) prevOption.classList.remove('selected');
             }
             
@@ -2054,42 +1850,36 @@
             selectedOption.classList.add('selected');
             
             // Store selection
-            quizState.selectedOption = quizState.questions[quizState.currentQuestionIndex].options[index];
-            quizState.lastSelectedOptionIndex = index;
+            quizState.selectedOptionIndex = index;
             
             // Update button text
             nextQuizQuestionBtn.textContent = 'Check Answer →';
         }
 
-        // Play the quiz word (manual playback only - no automatic speech)
         function playQuizWord() {
-            if (quizState.currentQuestionIndex >= quizState.totalQuestions) return;
+            if (!quizState.currentQuestion || quizState.currentQuestionIndex >= quizState.totalQuestions) return;
             
-            const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
-            speakWord(currentQuestion.word, null, 0.7);
+            speakWord(quizState.currentQuestion.germanWord, null, 0.7);
             
-            // Show "Play Again" button
             playQuizWordBtn.style.display = 'none';
             playQuizAgainBtn.style.display = 'block';
         }
 
         function handleNextQuizQuestion() {
-            if (!quizState.isAnswered && quizState.selectedOption !== null) {
-                // First click: check the answer and show results
+            if (!quizState.isAnswered && quizState.selectedOptionIndex !== null) {
                 checkQuizAnswer();
             } else if (quizState.isAnswered) {
-                // Second click: move to next question
                 nextQuizQuestion();
             }
         }
 
         function checkQuizAnswer() {
-            if (quizState.isAnswered || quizState.selectedOption === null) return;
+            if (quizState.isAnswered || quizState.selectedOptionIndex === null) return;
             
-            const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
-            const isCorrect = quizState.selectedOption === currentQuestion.correctAnswer;
+            const selectedOption = quizState.currentQuestion.options[quizState.selectedOptionIndex];
+            const isCorrect = selectedOption.isCorrect;
             
-            // Play ding sound if correct
+            // Play sound if correct
             if (isCorrect) {
                 playDingSound();
             }
@@ -2102,24 +1892,19 @@
             // Highlight correct and incorrect answers
             const optionElements = document.querySelectorAll('.quiz-option');
             optionElements.forEach((option, index) => {
-                const optionText = currentQuestion.options[index];
+                const optionData = quizState.currentQuestion.options[index];
                 
-                if (optionText === currentQuestion.correctAnswer) {
-                    // Correct answer in green
+                if (optionData.isCorrect) {
                     option.classList.add('correct');
-                } else if (index === quizState.lastSelectedOptionIndex) {
-                    // User's wrong selection in red
+                } else if (index === quizState.selectedOptionIndex) {
                     option.classList.add('incorrect');
                 }
                 
                 option.style.pointerEvents = 'none';
             });
             
-            // Show simple feedback without revealing the word meaning
-            quizFeedback.textContent = isCorrect ? 
-                'Correct!' : 
-                'Incorrect!';
-            
+            // Show feedback
+            quizFeedback.textContent = isCorrect ? 'Correct!' : 'Incorrect!';
             quizFeedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
             quizFeedback.style.display = 'block';
             
@@ -2127,48 +1912,48 @@
             quizScore.textContent = `Score: ${quizState.score}/${quizState.currentQuestionIndex + 1}`;
             
             quizState.isAnswered = true;
-            
-            // Update button text for next question
             nextQuizQuestionBtn.textContent = 'Next Question →';
         }
 
         function nextQuizQuestion() {
             quizState.currentQuestionIndex++;
+            quizState.shouldAutoPlay = true;
             
             if (quizState.currentQuestionIndex < quizState.totalQuestions) {
                 updateQuizDisplay();
+                
+                setTimeout(() => {
+                    if (quizState.shouldAutoPlay) {
+                        playQuizWord();
+                    }
+                }, 500);
             } else {
-                // Quiz completed
                 updateQuizDisplay();
             }
         }
 
         // AUDIO CHALLENGE FUNCTIONS
         function initializeAudioChallenge() {
-            // Reset audio state
             audioState = {
                 currentWord: null,
                 currentQuestionIndex: 0,
                 score: 0,
                 totalQuestions: 10,
                 words: [],
-                isAnswered: false
+                isAnswered: false,
+                shouldAutoPlay: false
             };
             
             const limitedWordData = getLimitedWordData();
             
-            // If word limit is less than 10, adjust total questions
             if (limitedWordData.length < 10) {
                 audioState.totalQuestions = Math.min(limitedWordData.length, 10);
             }
             
-            // Select random words for the challenge
             audioState.words = [...limitedWordData].sort(() => Math.random() - 0.5).slice(0, audioState.totalQuestions);
             
-            // Start with first word
             startAudioQuestion();
             
-            // Update display
             updateAudioStats();
             audioFeedback.style.display = 'none';
             audioTranslation.style.display = 'none';
@@ -2181,7 +1966,6 @@
 
         function startAudioQuestion() {
             if (audioState.currentQuestionIndex >= audioState.totalQuestions) {
-                // Challenge completed
                 audioQuestion.textContent = 'Challenge Completed!';
                 playAudioWordBtn.style.display = 'none';
                 playAudioAgainBtn.style.display = 'none';
@@ -2196,8 +1980,7 @@
             audioState.currentWord = audioState.words[audioState.currentQuestionIndex];
             audioState.isAnswered = false;
             
-            // Update display
-            audioQuestion.textContent = `Listen to the ${languageNames[mainLanguage].toLowerCase()} word and type what you hear`;
+            audioQuestion.textContent = 'Listen to the German word and type what you hear';
             playAudioWordBtn.style.display = 'block';
             playAudioAgainBtn.style.display = 'none';
             audioInput.value = '';
@@ -2211,13 +1994,11 @@
         function playAudioWord() {
             if (!audioState.currentWord) return;
             
-            speakWord(audioState.currentWord[mainLanguage], null, 0.7);
+            speakWord(audioState.currentWord.german, null, 0.7);
             
-            // Show "Play Again" button
             playAudioWordBtn.style.display = 'none';
             playAudioAgainBtn.style.display = 'block';
             
-            // Focus on input
             audioInput.focus();
         }
 
@@ -2225,41 +2006,31 @@
             if (audioState.isAnswered) return;
             
             const userAnswer = audioInput.value.trim().toLowerCase();
-            const correctAnswer = audioState.currentWord[mainLanguage].toLowerCase();
+            const correctAnswer = audioState.currentWord.german.toLowerCase();
             
-            // Allow for minor variations (ignore case, extra spaces)
             const isCorrect = userAnswer === correctAnswer;
             
-            // Update score
             if (isCorrect) {
                 audioState.score++;
             }
             
-            // Show feedback
             audioFeedback.textContent = isCorrect ? 
                 `Correct! You typed: "${audioInput.value}"` : 
-                `Incorrect. The word was: "${audioState.currentWord[mainLanguage]}". You typed: "${audioInput.value}"`;
+                `Incorrect. The word was: "${audioState.currentWord.german}". You typed: "${audioInput.value}"`;
             
             audioFeedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'incorrect'}`;
             audioFeedback.style.display = 'block';
             
-            // Show translation - get all languages except the main one
-            const otherLanguages = ['danish', 'english'];
-            let translationHTML = '<strong>Meaning:</strong><br>';
-            otherLanguages.forEach(lang => {
-                if (audioState.currentWord[lang]) {
-                    translationHTML += `${languageNames[lang]}: ${audioState.currentWord[lang]}<br>`;
-                }
-            });
+            let translationHTML = '<strong>Translations:</strong><br>';
+            translationHTML += `English: ${audioState.currentWord.english}<br>`;
+            translationHTML += `Danish: ${audioState.currentWord.danish}`;
             
             audioTranslation.innerHTML = translationHTML;
             audioTranslation.style.display = 'block';
             
-            // Disable input and submit button
             audioInput.disabled = true;
             submitAudioAnswerBtn.disabled = true;
             
-            // Update stats
             updateAudioStats();
             
             audioState.isAnswered = true;
@@ -2268,8 +2039,16 @@
 
         function nextAudioQuestion() {
             audioState.currentQuestionIndex++;
+            audioState.shouldAutoPlay = true;
+            
             startAudioQuestion();
             updateAudioStats();
+            
+            setTimeout(() => {
+                if (audioState.shouldAutoPlay) {
+                    playAudioWord();
+                }
+            }, 500);
         }
 
         function updateAudioStats() {
